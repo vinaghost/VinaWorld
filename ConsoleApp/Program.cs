@@ -2,11 +2,25 @@
 
 namespace ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Unit a = new()
+            {
+                Name = "A",
+                Health = 1000,
+                AttackDmg = 100,
+            };
+
+            Unit b = new()
+            {
+                Name = "B",
+                Health = 800,
+                AttackDmg = 20,
+            };
+
+            Battle.Fight(a, b);
         }
     }
 }
